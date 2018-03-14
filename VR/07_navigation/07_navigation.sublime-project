@@ -1,0 +1,32 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+			"folder_exclude_patterns": ["*__pycache__*", "*.sublime-project",
+			                            "*hmd-server*"]
+		}
+	],
+	"build_systems":
+	[
+		{
+			"name": "avango - Clean",
+			"working_dir": "$project_path",
+			"cmd": ["close_all_windows.bat"],
+
+			"variants":
+			[
+				{
+					"name": "Run on apollo",
+					"working_dir": "$project_path",
+					"cmd": ["start-apollo.bat"],
+		        },
+		        {
+					"name": "Run on kronos",
+					"working_dir": "$project_path",
+					"cmd": ["start-kronos.bat"],
+		        }
+			],
+		}
+	]
+}
